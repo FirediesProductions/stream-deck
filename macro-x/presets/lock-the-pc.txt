@@ -1,0 +1,5 @@
+# Lock The PC
+# Locks your screen instantly - the one-tap step-away.
+
+name: LOCK
+hotkey win+l

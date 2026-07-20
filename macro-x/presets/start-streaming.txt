@@ -1,0 +1,7 @@
+# Start Streaming
+# Opens OBS (if it isn't already), waits till it's truly ready, brings it up.
+
+name: LIVE
+run "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe" | if obs64 not running
+wait window "OBS" 20000
+window focus "OBS"

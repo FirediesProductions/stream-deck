@@ -1,0 +1,5 @@
+# Screenshot To File
+# Grabs the whole screen and saves it straight to your Pictures\Screenshots.
+
+name: SHOT
+hotkey win+prtsc

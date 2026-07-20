@@ -1,0 +1,6 @@
+# Panic Button
+# Mic quiet, every window gone. Set Ctrl+Shift+M as Discord's mute keybind first.
+
+name: PANIC
+hotkey ^+m
+showdesktop

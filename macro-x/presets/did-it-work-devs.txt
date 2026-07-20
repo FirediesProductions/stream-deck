@@ -1,0 +1,5 @@
+# Did It Work? (devs)
+# Runs your script - green tick = worked, red cross = which step broke.
+
+name: CHECK
+run "C:\\path\\to\\your-script.bat" hidden

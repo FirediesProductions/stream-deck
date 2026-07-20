@@ -1,0 +1,5 @@
+# Clip The Last 30s
+# The same clip magic on any GPU - uses Windows Game Bar (turn it on once in Settings > Gaming).
+
+name: CLIP 30
+hotkey win+alt+g

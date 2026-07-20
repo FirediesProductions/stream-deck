@@ -1,0 +1,5 @@
+# Emoji Panel
+# The Windows emoji picker, right where your cursor is.
+
+name: EMOJI
+hotkey win+dot

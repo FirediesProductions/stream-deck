@@ -1,0 +1,5 @@
+# Reopen Closed Tab
+# Brings back the browser tab you just closed by mistake.
+
+name: REOPEN
+hotkey ctrl+shift+t

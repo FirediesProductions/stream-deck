@@ -1,0 +1,5 @@
+# Play / Pause
+# Play or pause whatever's playing - Spotify, YouTube, anything.
+
+name: PLAY
+hotkey playpause

@@ -1,0 +1,6 @@
+# Fix My Writing
+# Copy any text, press, paste it back fixed.
+# Runs on your own Claude - needs Claude Code installed and signed in (claude.ai/code).
+
+name: FIX IT
+claude "Read my clipboard with PowerShell Get-Clipboard. Fix the spelling and grammar and make it read clearly - keep my language, tone and meaning. Then put ONLY the corrected text back on the clipboard with Set-Clipboard." do

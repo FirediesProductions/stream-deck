@@ -1,0 +1,6 @@
+# Commit My Work
+# Devs: stages and commits with a proper message - point the folder at your repo.
+# Runs on your own Claude - needs Claude Code installed and signed in (claude.ai/code).
+
+name: COMMIT
+claude "Run git status in this folder. If there are changes, stage them all and commit with a clear one-line message describing what changed." do dir "C:\path\to\your\repo"

@@ -1,0 +1,6 @@
+# Record Screen
+# Starts / stops recording your screen with Windows Game Bar (press again to stop).
+# Great for tutorials and bug clips.
+
+name: RECORD
+hotkey win+alt+r

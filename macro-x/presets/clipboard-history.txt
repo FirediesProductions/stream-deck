@@ -1,0 +1,5 @@
+# Clipboard History
+# Everything you copied lately (Windows asks once to turn it on).
+
+name: CLIPS
+hotkey win+v

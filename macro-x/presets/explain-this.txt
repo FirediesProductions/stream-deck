@@ -1,0 +1,6 @@
+# Explain This
+# Copy something confusing, press, get it in plain English.
+# Runs on your own Claude - needs Claude Code installed and signed in (claude.ai/code).
+
+name: EXPLAIN
+claude "Read my clipboard with PowerShell Get-Clipboard and explain what it means in plain English - assume I am smart but new to this. Show me the explanation." do

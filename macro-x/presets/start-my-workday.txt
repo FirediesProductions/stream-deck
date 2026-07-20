@@ -1,0 +1,7 @@
+# Start My Workday
+# Everything you open every morning - swap in your own sites and folders.
+
+name: WORK
+open "https://mail.google.com"
+wait 500
+open "https://calendar.google.com"

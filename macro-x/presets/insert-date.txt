@@ -1,0 +1,5 @@
+# Insert Date
+# Types today's date wherever your cursor is. Always current - expands when you press it.
+
+name: DATE
+type "{date}"

@@ -1,0 +1,5 @@
+# Next Track
+# Skip to the next song, wherever it's playing.
+
+name: NEXT
+hotkey nexttrack

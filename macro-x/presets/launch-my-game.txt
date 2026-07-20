@@ -1,0 +1,6 @@
+# Launch My Game
+# Clears the desktop and opens your game - change the path to yours.
+
+name: GAME
+showdesktop
+run "C:\\Path\\To\\YourGame.exe" | if YourGame not running

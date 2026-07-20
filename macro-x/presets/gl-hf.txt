@@ -1,0 +1,8 @@
+# GL HF
+# Says gl hf in the match chat - Enter, type, Enter. Swap the first key for your game's chat key.
+
+name: GL HF
+hotkey enter
+wait 150
+type "gl hf"
+hotkey enter

@@ -1,0 +1,5 @@
+# Snip To Share
+# The Windows snipper - drag a region and it's on your clipboard.
+
+name: SNIP
+hotkey win+shift+s

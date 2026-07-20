@@ -1,0 +1,6 @@
+# Timestamp
+# Drops the date AND time - perfect for notes, logs and journals.
+# Tokens: {date} {time} {datetime} {isodate} {day} - all expand at press-time.
+
+name: STAMP
+type "{datetime}"

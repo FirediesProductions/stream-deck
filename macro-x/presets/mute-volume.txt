@@ -1,0 +1,5 @@
+# Mute Volume
+# Silence everything in one tap (press again to unmute).
+
+name: MUTE
+hotkey mute

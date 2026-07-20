@@ -1,0 +1,5 @@
+# Save That Clip
+# Saves the last 30s of gameplay (needs NVIDIA Instant Replay on - Alt+Z).
+
+name: CLIP
+hotkey %{F10}

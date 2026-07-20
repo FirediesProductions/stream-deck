@@ -1,0 +1,5 @@
+# Instant Reply
+# Drops your saved message wherever the cursor is - edit the text to yours.
+
+name: REPLY
+type "Thanks for reaching out! I'll get back to you today."

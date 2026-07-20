@@ -1,0 +1,7 @@
+# Ready To Share Screen
+# Hides the mess, brings up the window you want seen. Change Zoom to your app.
+
+name: SHARE
+showdesktop
+wait 300
+window focus "Zoom"

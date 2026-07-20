@@ -1,0 +1,6 @@
+# Paste Plain
+# Pastes without the formatting - no stray fonts, colours or sizes.
+# Works in most modern apps (Chrome, Docs, Slack, VS Code...).
+
+name: PLAIN
+hotkey ctrl+shift+v

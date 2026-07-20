@@ -1,0 +1,5 @@
+# Send To Other Screen
+# Throws the current window onto your second monitor.
+
+name: THROW
+hotkey win+shift+right

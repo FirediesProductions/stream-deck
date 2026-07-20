@@ -1,0 +1,5 @@
+# Split Screen
+# Snaps the current window to the left half - make a twin key with win+right for the other side.
+
+name: SNAP L
+hotkey win+left

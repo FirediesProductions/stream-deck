@@ -1,0 +1,5 @@
+# Mute Discord
+# Works even mid-game. Set Ctrl+Shift+M as Discord's mute keybind (Settings > Keybinds).
+
+name: DISCORD
+hotkey ^+m

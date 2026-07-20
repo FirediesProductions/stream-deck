@@ -1,0 +1,6 @@
+# Paste My Email
+# Types your email at the cursor - or swap it for any snippet you retype all day
+# (address, phone, handle). Edit the text to yours.
+
+name: EMAIL
+type "you@example.com"
