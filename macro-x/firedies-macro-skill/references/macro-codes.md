@@ -1,6 +1,6 @@
-# Firedies Macro Code - full grammar reference
+# Macro Code - full grammar reference
 
-A Macro Code is plain text, one step per line, run top to bottom. Paste it into the Firedies Macro key's settings ("Show code" > paste > Apply). This is the complete, exact grammar the plugin parses - do not invent anything beyond it.
+A Macro Code is plain text, one step per line, run top to bottom. Paste it into the Macro X key's settings ("Show code" > paste > Apply). This is the complete, exact grammar the plugin parses - do not invent anything beyond it.
 
 ## Header
 
@@ -65,7 +65,7 @@ symbol, emoji and line break. Paste is used because it lands atomically: nothing
 gets dropped, even in a fast game chat (character-by-character typing loses letters
 there). The clipboard is saved and restored around it. A literal `"` inside the text
 is written `\"`. (The legacy `instant` keyword still parses but is a no-op now - paste
-is the only behaviour.)
+is the only behavior.)
 
 **Live tokens** (expand at press-time): `{date}` `{time}` `{datetime}` `{isodate}` `{day}`.
 E.g. `type "Note {datetime}"` -> `Note 19/07/2026 14:30`. Use them for the classic
@@ -78,7 +78,7 @@ window min "Spotify"
 window max "Notepad"
 window restore "Discord"
 ```
-Ops: `focus`, `min` (minimise), `max` (maximise), `restore`. Title match is partial.
+Ops: `focus`, `min` (minimize), `max` (maximize), `restore`. Title match is partial.
 
 ### wait - pause, or wait for reality
 ```
@@ -97,11 +97,11 @@ mouse 500 500 right back # right-click, then move the cursor back to where it wa
 ```
 `X Y` are absolute screen pixels. Button: `left` (default), `right`, `double`, `move`. Trailing `back` returns the cursor to its start.
 
-### showdesktop - minimise everything
+### showdesktop - minimize everything
 ```
 showdesktop
 ```
-The panic move. (Toggles minimise-all / restore, like Win+D.)
+The panic move. (Toggles minimize-all / restore, like Win+D.)
 
 ### sound - play a chime or a file
 ```
@@ -152,4 +152,4 @@ Do not invent these - they will not parse:
 If a user needs one of these, tell them plainly and offer the closest real thing (e.g. "the Focus plugin's timer can run this macro when it hits zero" for scheduling; hold-for-a-second-macro for a two-in-one key).
 
 ## Using the code
-Open the Firedies Macro key's settings in Stream Deck, click **Show code**, paste, and **Apply**. The blocks editor and the code stay in sync, so the pasted code becomes editable blocks immediately.
+Open the Macro X key's settings in Stream Deck, click **Show code**, paste, and **Apply**. The blocks editor and the code stay in sync, so the pasted code becomes editable blocks immediately.

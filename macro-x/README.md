@@ -7,7 +7,7 @@ Elgato Stream Deck. It launches your apps and scripts, sends your shortcuts, and
 nobody else does - the key itself tells you the truth: a progress bar while it runs, a green
 tick when it worked, a red cross with the exact step that failed when it didn't.
 
-Nothing is faked. Nothing leaves your PC.
+Nothing is faked.
 
 - **[Macro Code reference](macro-code-reference.md)** - the full grammar
 - **[Presets](presets/)** - ready-made codes to paste
@@ -15,16 +15,17 @@ Nothing is faked. Nothing leaves your PC.
 
 ## Quick start
 
-1. Drag **Macro** (Firedies Toolkit) onto any key.
-2. Press it. Every window minimises - a fresh Macro key is the classic panic button out of
+1. Drag **Macro X** (under **Macro X**) onto any key or dial.
+2. Press it. Every window minimizes - a fresh Macro key is the classic panic button out of
    the box. Press again and your windows come back.
 3. Open the key's settings and make it yours: a name, your own picture, your own steps.
 
 ## The face
 
 - **Your image** - PNG, JPG, SVG, or an **animated GIF** (it really animates on the key).
-  Size and position sliders included. No image? You get the Firedies mark, tintable to any
-  colour.
+  **Zoom from 20% to 300%** and pan it, so you can crop right into a photo instead of being stuck
+  with the whole frame. No image? You get the Macro X mark - or the Firedies phoenix if you prefer
+  it - tintable to any color.
 - **The name is yours to show or not** - keys stay clean by default. (A panic button doesn't
   need PANIC written on it.)
 - **While running** - the key dims, a progress bar fills, and a counter shows which step
@@ -41,11 +42,12 @@ fields - no code needed.
 |---|---|
 | **Run script / app** | Opens a program or runs a script: `.exe` `.ps1` `.py` `.ahk` `.bat` and more. Can run hidden. If Python or AutoHotkey isn't installed, the settings say so up front. |
 | **Open** | Opens a file, folder, or web address. |
-| **Hotkey / type text** | Presses a shortcut (`enter`, `ctrl+shift+n`) or types out saved text wherever your cursor is. |
+| **Hotkey / type text** | Presses a shortcut (`enter`, `ctrl+shift+n`) or pastes saved text wherever your cursor is - instant, and it keeps every symbol, emoji and line break exactly. |
 | **Mouse click** | Moves the mouse to a screen spot and clicks. Press **Grab position**, hover where you want for 3 seconds, and the spot is captured. Tick "put the mouse back" and your cursor returns afterwards. |
-| **Window** | Focuses, minimises, maximises, or restores a window by its title. |
+| **Window** | Focuses, minimizes, maximizes, or restores a window by its title. |
 | **Wait** | Waits a fixed time - or **until a window exists** or **until a program is running**. Real waits instead of guessed delays, with a timeout that fails honestly. |
-| **Show desktop (panic)** | Minimises everything; press again to bring it all back. Works even where sent keystrokes don't. |
+| **Play sound** | A chime (eight built in, plus two alarms) or your own WAV / MP3, at your volume. Plays and moves straight on - add a Wait after it if you want the sound to finish first. |
+| **Show desktop (panic)** | Minimizes everything; press again to bring it all back. Works even where sent keystrokes don't. |
 | **Ask Claude** | Describe a job in plain words and Claude Code does it on your machine - your login, your rules, a visible window so you watch it work. Needs your own Claude account + [Claude Code](https://claude.ai/code) installed (not included - see below). |
 
 Every step can also have a **condition** - run only if a certain program is (or isn't)
@@ -65,7 +67,7 @@ are the same macro, live - edit either and the other follows.
 ```
 name: GL HF
 hotkey enter
-wait 150
+wait 15
 type "gl hf"
 hotkey enter
 ```
@@ -80,9 +82,6 @@ up to six states). Each press runs the current state's steps, then the key wears
 state's face - its own image, its own word. The classic: a Discord key that shows **MUTED**
 after you mute and **LIVE** after you unmute.
 
-For recording keys, tick **live timer** on a state - while it's active the key shows a
-pulsing red dot with the time counting up.
-
 Honesty note: for apps that can't be asked (Discord has no way to check), the key shows what
 it believes from your presses. Where reality can be checked - is a program running, does a
 window exist - Macro X checks reality.
@@ -93,16 +92,16 @@ Tick **Hold action** and holding the key for half a second runs a *different* ma
 quick press. Mute on press, deafen on hold. Clip on press, screenshot on hold. One key, two
 pockets.
 
-## Honest limits
-
 ## What files work
 
 | Where | Formats |
 | --- | --- |
-| **Key face** | PNG, JPG, SVG - or an **animated GIF** (it really animates on the key). No image? The Firedies mark, tintable to any colour, or a plain colour fill. |
+| **Key face** | PNG, JPG, SVG - or an **animated GIF** (it really animates on the key). No image? The Firedies mark, tintable to any color, or a plain color fill. |
 | **Sounds** | Eight built-in chimes, or your own **WAV / MP3** - most audio Windows can play (M4A, FLAC) works too. |
 | **Run step** | `.exe` `.bat` `.cmd` `.ps1` `.py` `.ahk` - the right runner is found for you, with an honest heads-up if Python or AutoHotkey is missing. Anything else opens with whatever Windows would use. |
 | **Macro codes** | Plain text. Copy, paste anywhere, share freely. |
+
+## Honest limits
 
 We'd rather tell you now than have you find out later:
 
@@ -116,10 +115,14 @@ We'd rather tell you now than have you find out later:
   toggle - press again and everything comes back.)
 - **Toggles show believed state** for apps that can't be queried. Press the key, not the
   app, and the faces stay in sync.
-- **Everything else runs locally.** No accounts, no tracking, nothing phones home. The only
-  thing that ever leaves your PC is a prompt you wrote for a Claude step - from your machine
-  to Anthropic, under your own account.
+- **Everything else runs on your machine.** No account to make, no sign-up, no analytics. The
+  only thing that ever leaves your PC is what you hand to a Claude step - your prompt, and on
+  *Do the task* whatever Claude reads or runs to carry it out - from your machine to Anthropic,
+  under your own account. (An Open step pointed at a web address opens your browser, as you'd
+  expect.)
 
 ---
 
 *Firedies Productions · Windows 10/11 · Stream Deck 6.5+*
+
+**[Download the owner's manual (PDF)](Macro%20X%20Manual.pdf)** - the full guide, laid out for reading.

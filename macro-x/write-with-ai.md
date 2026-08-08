@@ -31,7 +31,7 @@ STEPS
   window focus|min|max|restore "TITLE"
   mouse X Y left|right|double|move [back]        click at X,Y; "back" returns the cursor
   sound chimeN   OR   sound "C:\file.wav" [vol 0-100]
-  showdesktop                   minimise everything (toggles)
+  showdesktop                   minimize everything (toggles)
   claude "PROMPT" [do] [dir "..."] [model NAME] [out window|clipboard|notepad]
         hands the job to the user's OWN Claude Code (they must have it installed + signed
         in; billed by Anthropic under their plan). "do" lets it actually act.
@@ -63,12 +63,12 @@ RULES
 EXAMPLE
   name: GL HF
   hotkey enter
-  wait 150
+  wait 15
   type "gl hf"
   hotkey enter
 ```
 
 ---
 
-Prefer Claude Code? The [`firedies-macro-skill/`](../firedies-macro-skill/) (MIT) teaches it
+Prefer Claude Code? The [`firedies-macro-skill/`](firedies-macro-skill/) (MIT) teaches it
 to write Macro Codes automatically - point Claude at the skill and just ask.

@@ -3,6 +3,6 @@
 
 name: GL HF
 hotkey enter
-wait 150
+wait 15
 type "gl hf"
 hotkey enter

@@ -1,11 +1,11 @@
 ---
-name: firedies-macro
-description: Write Firedies Macro Codes - the plain-text automation format for the Firedies Macro plugin for Elgato Stream Deck. Use whenever someone wants to create a Stream Deck macro, automate keypresses / app launches / window control / mouse clicks / typed text, build a one-button routine, or asks for a "Firedies macro", a "macro code", or "a macro that does X". Outputs a paste-ready code block the user drops straight into the plugin's code box.
+name: firedies-macro-x
+description: Write Macro Codes - the plain-text automation format for Macro X, the free Firedies plugin for Elgato Stream Deck. Use whenever someone wants to create a Stream Deck macro, automate keypresses / app launches / window control / mouse clicks / typed text, build a one-button routine, or asks for a "Macro X macro", a "macro code", or "a macro that does X". Outputs a paste-ready code block the user drops straight into the plugin's code box.
 ---
 
-# Firedies Macro - write a macro from a plain-English wish
+# Macro X - write a macro from a plain-English wish
 
-The **Firedies Macro** plugin (Elgato Stream Deck, Windows) turns one key into a whole routine. Every macro is a **Macro Code**: a few lines of plain text. This skill turns a plain-English request into a valid Macro Code the user can paste straight into the plugin.
+The **Macro X** plugin (Elgato Stream Deck, Windows) turns one key into a whole routine. Every macro is a **Macro Code**: a few lines of plain text. This skill turns a plain-English request into a valid Macro Code the user can paste straight into the plugin.
 
 ## How to respond
 
@@ -33,7 +33,7 @@ wait 500                                               # wait milliseconds
 wait window "OBS" 20000                                # wait until a window exists (timeout ms)
 wait process obs64 10000                               # wait until a process is running
 mouse 640 480 left                                     # move / click at screen pixels: left|right|double|move [back]
-showdesktop                                            # minimise everything (panic)
+showdesktop                                            # minimize everything (panic)
 sound chime3 vol 80                                    # play a built-in chime (chime1-8) or "C:\my.wav"
 claude "open Audacity and start a new project" do      # let Claude DO the task on the user's own machine
 ```

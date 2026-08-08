@@ -7,7 +7,7 @@ blocks are the same macro, live.
 ```
 name: GL HF
 hotkey enter
-wait 150
+wait 15
 type "gl hf"
 hotkey enter
 ```
@@ -86,7 +86,7 @@ back afterwards.
 So `type "Note added {datetime}"` types `Note added 19/07/2026 14:30`. The classic
 "insert today's date" macro, finally built in.
 
-*(The old `instant` keyword still parses on existing codes - it's the only behaviour
+*(The old `instant` keyword still parses on existing codes - it's the only behavior
 now, so you can drop it. A rare app that blocks Ctrl+V paste is the one place this
 can't reach.)*
 
@@ -126,7 +126,7 @@ sound "C:\my.wav" vol 80
 ```
 showdesktop
 ```
-Minimises everything (press again in a fresh key restores). Uses Windows' own mechanism,
+Minimizes everything (press again in a fresh key restores). Uses Windows' own mechanism,
 so it works even where sent keystrokes don't.
 
 ### `claude` - hand the job to AI
