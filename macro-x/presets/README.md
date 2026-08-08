@@ -55,3 +55,9 @@ Every code here is verified against the real Macro X parser.
 ---
 
 Made a good one? [Share it in Discussions →](../../../../discussions) - the trading post.
+
+---
+
+**These Macro Codes are MIT licensed.** Copy them, change them, post them, build on
+them - commercial or not. See [LICENSE](../../LICENSE). The rest of this repository is all
+rights reserved.
