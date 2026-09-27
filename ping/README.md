@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/phoenix-white.svg">
+    <img src="../assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Ping
 
 **Know before the game tells you.**
@@ -119,9 +126,6 @@ On a dial, **turn** to cycle the four views and **press** to run. On a key, pres
 | **A server has no icon** | No bundled mark and no reachable favicon. Give it an emoji or your own picture from its icon chip. |
 | **Speed test reads low** | Something else is using the line. That's the honest number - watch the live meters instead. |
 
-
-**[Download the owner's manual (PDF)](Ping%20Manual.pdf)** - the full guide, laid out for reading.
-
 ---
 
-Windows 10/11 · Stream Deck 6.5+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

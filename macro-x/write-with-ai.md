@@ -32,6 +32,15 @@ STEPS
   mouse X Y left|right|double|move [back]        click at X,Y; "back" returns the cursor
   sound chimeN   OR   sound "C:\file.wav" [vol 0-100]
   showdesktop                   minimize everything (toggles)
+  holdkey KEY [ms]              hold a key or combo down, then always let go (default 1000,
+                                max 10000). e.g. holdkey w 1500
+  autoclick RATE/s [for SECS] [x CLICKS] [button left|right|double] [move stop|keep]
+  autoclick stop                clicks by itself; pressing the same key again stops it.
+                                Max 50/s, 300 s, 5000 clicks. e.g. autoclick 10/s for 30
+  prompt "MESSAGE" [timeout SECS]   pause and ask. The message shows on the key and the
+                                next press of that key carries on. Default 60 s, max 600.
+  label "TEXT"   OR   label clear    write live text on the key. {date} {time} {day} work.
+                                Never saved - a restart brings the key's own name back.
   claude "PROMPT" [do] [dir "..."] [model NAME] [out window|clipboard|notepad]
         hands the job to the user's OWN Claude Code (they must have it installed + signed
         in; billed by Anthropic under their plan). "do" lets it actually act.
@@ -46,6 +55,7 @@ HOTKEY NAMES (friendly)
 LIVE TOKENS (inside type "...", expand when the key is pressed)
   {date} {time} {datetime} {isodate} {day}
   e.g. type "Note added {datetime}"
+  They work in label "..." too, e.g. label "Saved {time}"
 
 PER-STEP EXTRAS (append after a | at the end of a line)
   | if NAME running        or   | if NAME not running     run the step only when true
@@ -57,6 +67,8 @@ RULES
   - A step that fails stops the macro and the key shows a red cross with the step number.
   - Name the macro, and add a # comment for anything the user must change (paths, keybinds).
   - NEVER put secrets in a code - no tokens, passwords, or private paths. Codes are shared as plain text.
+  - autoclick and holdkey drive the real keyboard and mouse. Use them when asked for, never
+    to pad a macro out, and say plainly in a # comment what will be clicked or held.
   - If a request needs a real file path you don't know, use a clear placeholder like
     "C:\path\to\your\file" and flag it in a # comment.
 

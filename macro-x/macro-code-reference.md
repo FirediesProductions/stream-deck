@@ -129,6 +129,62 @@ showdesktop
 Minimizes everything (press again in a fresh key restores). Uses Windows' own mechanism,
 so it works even where sent keystrokes don't.
 
+### `holdkey` - hold a key down, then let go
+
+```
+holdkey w
+holdkey w 1500
+holdkey ctrl+shift 250
+```
+Presses a key or combo, waits, and **always** lets go - when the macro ends, when it fails,
+when the key leaves the deck, and if the plugin quits mid-hold. The number is milliseconds
+and defaults to 1000. The ceiling is 10000 on purpose: longer than that is a stuck key, not
+a macro.
+
+*(Not "hold while you hold the deck key" - a Macro runs on key-up, so the deck key is
+already back up by the time the macro starts. A named duration is the honest version.)*
+
+### `autoclick` - click by itself, until you stop it
+
+```
+autoclick 10/s for 30
+autoclick 8/s for 30 x 100 button right move keep
+autoclick stop
+```
+Clicks at the rate you set, for the time you set. **Press the same key again and it stops** -
+that always wins. It also stops on its own when the time runs out, when you move the mouse,
+when the key leaves the deck, and when the plugin quits.
+
+Options: `for 30` (seconds, 300 max), `x 100` (stop after this many clicks, 5000 max),
+`button left|right|double`, `move stop|keep` (`stop` is the default - moving the mouse ends
+it; `keep` lets it carry on while you use the machine).
+
+Rate stops at 50/s. Every limit lives inside the clicker itself, so nothing can outlive it.
+
+### `prompt` - stop and ask, then carry on
+
+```
+prompt "Now switch to the invoice tab"
+prompt "Ready?" timeout 30
+```
+The macro pauses, your message appears on the key, and **the next press of that key carries
+on from the following step**. No answer inside the wait and the macro stops with the honest
+red cross. `timeout` is seconds: 60 by default, 5 minimum, 600 maximum.
+
+Use it for the step only you can do - switch tabs, plug something in, check a number.
+
+### `label` - write on the key
+
+```
+label "READY"
+label "Saved {time}"
+label clear
+```
+Writes live text on the key and leaves it there until something changes it. `{date}`,
+`{time}` and `{day}` work here. `label clear` takes it off.
+
+It is **never saved** into the key's name, so a restart brings your own name back.
+
 ### `claude` - hand the job to AI
 ```
 claude "tidy my desktop and empty the recycle bin" do

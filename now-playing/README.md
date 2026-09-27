@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/phoenix-white.svg">
+    <img src="../assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Now Playing
 
 **Whatever is playing, on your deck.**
@@ -125,9 +132,6 @@ support.
 **Art is missing but text is there.** The player is reporting the track without artwork. Some web
 players do this on certain sites.
 
-
-**[Download the owner's manual (PDF)](Now%20Playing%20Manual.pdf)** - the full guide, laid out for reading.
-
 ---
 
-Windows 10/11 · Stream Deck 6.5+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

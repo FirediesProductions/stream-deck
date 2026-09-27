@@ -1,7 +1,14 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/phoenix-white.svg">
+    <img src="assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Firedies - Stream Deck Series
 
 Plugins for the Elgato Stream Deck that look hand-made and never lie about their own state.
-Built by [Firedies Productions](https://firedies.com), Oxford.
+Built by [Firedies Productions](https://firedies.productions), Oxford.
 
 ## The series
 
@@ -9,12 +16,13 @@ Built by [Firedies Productions](https://firedies.com), Oxford.
 |---|---|---|---|
 | **Macro X** | One key that does many things: launch, hotkeys, type, click, wait, AI. The key becomes the answer. | Free | [`macro-x/`](macro-x/) |
 | **Metrics** | CPU · RAM · GPU · VRAM · Disk, live every second. No drivers, no admin. | Free | [`metrics/`](metrics/) |
-| **Ping** | Live latency to your game server, with *detect your server* and a speed test. | TBD | [`ping/`](ping/) |
-| **Focus** | Pomodoro, timer, stopwatch, and a clock & calendar that puts your next meeting on a key. | TBD | [`focus/`](focus/) |
-| **Rank Showcase** | Your rank, league, or level, live on a key. | TBD | [`rank-showcase/`](rank-showcase/) |
-| **Now Playing** | Album art, track and artist, live progress. The accent is sampled from the cover. | TBD | [`now-playing/`](now-playing/) |
+| **Ping** | Live latency to your game server, with *detect your server* and a speed test. | $6.99 | [`ping/`](ping/) |
+| **Focus** | Pomodoro, timer, stopwatch, and a clock & calendar that puts your next meeting on a key. | $7.99 | [`focus/`](focus/) |
+| **Rank Showcase** | Your rank, league, or level, live on a key. | $4.99 | [`rank-showcase/`](rank-showcase/) |
+| **Now Playing** | Album art, track and artist, live progress. The accent is sampled from the cover. | $5.99 | [`now-playing/`](now-playing/) |
+| **Audio Meters** | Nine studio meters - level, VU, spectrum, spectrogram, waveform, scope, stereo, loudness, key - on keys and dials. | TBD | [`audio-meters/`](audio-meters/) |
 
-All plugins: Windows 10/11, Stream Deck 6.5+. Find them on the
+All plugins: Windows 10/11, Stream Deck 6.9+. Find them on the
 [Elgato Marketplace](https://marketplace.elgato.com) under **Firedies Productions**.
 
 > **The house rule: the face never lies.** A tick means it ran. A red cross tells you which
@@ -45,6 +53,9 @@ stream-deck/
 │  └─ README.md             the manual
 ├─ now-playing/             what is playing, with the cover
 │  └─ README.md             the manual
+├─ audio-meters/            nine studio meters on keys and dials
+│  └─ README.md             the manual
+├─ assets/                  the Firedies mark
 └─ CONTRIBUTING.md          how to share your codes
 ```
 
@@ -80,6 +91,12 @@ More packages get their own folder as their docs land.
 
 - **[The manual](now-playing/README.md)** - the three looks, the dial that does two jobs, and the
   one component foobar2000 needs for its progress bar
+
+## Audio Meters
+
+- **[The manual](audio-meters/README.md)** - the nine meters and each one's knob, the eight
+  loudness readings, the four sources, and how to meter a DAW that runs on ASIO through your
+  interface's loopback
 
 ## Share your codes
 

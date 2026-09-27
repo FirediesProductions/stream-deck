@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/phoenix-white.svg">
+    <img src="../assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Rank Showcase
 
 **Earn it. Show it.**
@@ -103,9 +110,6 @@ cannot, so it carries a different one.
   don't recolour, crop or redraw your image.
 - **Windows only, for now.**
 
-
-**[Download the owner's manual (PDF)](Rank%20Manual.pdf)** - the full guide, laid out for reading.
-
 ---
 
-Windows 10/11 · Stream Deck 6.5+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

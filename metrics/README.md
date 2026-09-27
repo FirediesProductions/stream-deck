@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/phoenix-white.svg">
+    <img src="../assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Metrics
 
 **The real number. Every second.**
@@ -138,9 +145,6 @@ different schedules. Watch for a few seconds and they track each other.
 **Nothing updates at all.** The reader is a PowerShell process; some locked-down machines block it
 by policy. Removing every Metrics key and adding one back restarts it.
 
-
-**[Download the owner's manual (PDF)](Metrics%20Manual.pdf)** - the full guide, laid out for reading.
-
 ---
 
-Windows 10/11 · Stream Deck 6.5+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

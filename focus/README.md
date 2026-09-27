@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../assets/phoenix-white.svg">
+    <img src="../assets/phoenix-black.svg" alt="Firedies Productions" width="76">
+  </picture>
+</p>
+
 # Focus
 
 **Time you can see without looking away.**
@@ -118,9 +125,6 @@ long you have. When the meeting starts it goes to a live **NOW**.
 - **Join only works if the invitation carries a link.** No link in the event, nothing to open.
 - **Windows only, for now.**
 
-
-**[Download the owner's manual (PDF)](Focus%20Manual.pdf)** - the full guide, laid out for reading.
-
 ---
 
-Windows 10/11 · Stream Deck 6.5+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

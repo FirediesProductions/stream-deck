@@ -35,6 +35,10 @@ wait process obs64 10000                               # wait until a process is
 mouse 640 480 left                                     # move / click at screen pixels: left|right|double|move [back]
 showdesktop                                            # minimize everything (panic)
 sound chime3 vol 80                                    # play a built-in chime (chime1-8) or "C:\my.wav"
+holdkey w 1500                                         # hold a key or combo down, then always let go (max 10000 ms)
+autoclick 10/s for 30                                  # click by itself; the same key pressed again stops it
+prompt "Switch to the invoice tab"                     # pause and ask; the next press of the key carries on
+label "READY {time}"                                   # write live text on the key (label clear takes it off)
 claude "open Audacity and start a new project" do      # let Claude DO the task on the user's own machine
 ```
 

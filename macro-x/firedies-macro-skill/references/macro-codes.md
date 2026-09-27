@@ -111,6 +111,67 @@ sound "C:\my\alert.wav" vol 100
 ```
 `chime1`-`chime8` are built in. Or a quoted `.wav`/`.mp3` path. `vol` is 0-100 (default 70).
 
+### holdkey - hold a key down, then let go
+```
+holdkey w
+holdkey w 1500
+holdkey ctrl+shift 250
+holdkey w latch
+holdkey w latch 45min
+holdkey w release
+holdkey release
+```
+**Timed** (`holdkey w 1500`): milliseconds, default 1000, ceiling 10000. Always released - on
+success, on failure, when the deck key goes away, and if the plugin quits mid-hold.
+
+**Latched** (`holdkey w latch`): holds the key down and lets the macro carry on. It stays down
+until something lets it go, and the same step run again is what lets it go - so one key is both
+the hold and the release. This is the one to reach for when somebody says "hold W", "hold
+sprint", or "hold to aim". Optionally `latch <n>min` - how long it may hold if nothing stops it
+(default 30, max 240). The key wears an amber HOLD badge for as long as it is held.
+
+Its stops, in the order people find them: press the key again · any Macro key running
+`holdkey release` · the minutes above running out · the plugin quitting.
+
+**Release** (`holdkey w release`, `holdkey release`): lets go of that key, or of everything.
+Neither ever fails, so both are safe on a panic key. `holdkey release` is worth suggesting as
+its own key whenever you write somebody a latch.
+
+Note what none of these are: "hold while my finger is on the deck key". A Macro runs on
+key-up, so the deck key is already back up when the macro starts. The latch is the honest
+version of that request, and it is usually what the person actually wanted.
+
+### autoclick - click by itself until stopped
+```
+autoclick 10/s for 30
+autoclick 8/s for 30 x 100 button right move keep
+autoclick stop
+```
+`for` seconds (max 300), `x` clicks (max 5000), `button left|right|double`,
+`move stop|keep` (`stop` is the default - moving the mouse ends it). Rate maxes at 50/s.
+
+Pressing the same key again stops it, and that always wins. Say so in a `#` comment when
+you write one, so the user knows how to stop it before they start it.
+
+### prompt - pause and ask the user
+```
+prompt "Now switch to the invoice tab"
+prompt "Ready?" timeout 30
+```
+The macro waits, the message shows on the key, and the next press of that key resumes from
+the following step. Default 60 s, min 5, max 600. No answer in time = the macro fails.
+
+Reach for this when a step genuinely needs the human - not to add ceremony.
+
+### label - write live text on the key
+```
+label "READY"
+label "Saved {time}"
+label clear
+```
+`{date}` `{time}` `{datetime}` `{isodate}` `{day}` all expand. Never persisted, so the key's
+own name returns on restart. `label clear` removes it.
+
 ### claude - let AI do the task
 ```
 claude "what's a good git commit message for staged changes"          # answer only, shown in a window
@@ -130,6 +191,32 @@ claude "draft release notes" out notepad                              # answer o
   Firedies is not affiliated with Anthropic. When writing a code for someone, mention this
   requirement if the code uses a `claude` step.
 
+## Loops
+
+```
+repeat 20
+  hotkey f
+  wait 120
+end
+
+repeat forever
+  hotkey e
+  wait 250
+end
+```
+`repeat <n>` … `end` runs everything between the two lines n times (max 10000), then the macro
+carries on with whatever follows `end`. `repeat forever` keeps going until the user presses the
+key again - **pressing the key while a macro is running always stops it**, and the key shows it
+was stopped rather than claiming it finished. Say that in a `#` comment when you write somebody
+a `forever` loop, so they know the stop before they start it.
+
+Loops nest up to 5 deep. Indentation is optional and ignored - it is written that way because
+it reads better. `end` closes the nearest open `repeat`. Every `repeat` needs an `end`, and the
+panel will not accept code where one is missing.
+
+A loop with no `wait` in it is paced so it cannot flood the machine, and a run has a ceiling on
+total steps, so nothing runs away.
+
 ## Modifiers (append with `|`)
 
 ```
@@ -144,10 +231,10 @@ Multiple modifiers can chain: `run "x.exe" | if x not running`.
 ## What the format does NOT have
 
 Do not invent these - they will not parse:
-- No loops, no `repeat`, no `every N minutes` (scheduling lives in the Timer/Focus plugin, whose timer can *run a macro* at zero).
+- No `every N minutes` and no scheduling (that lives in the Timer/Focus plugin, whose timer can *run a macro* at zero). Loops DO exist - see Loops above - but they are counted or until-stopped, not clock-driven.
 - No variables or arithmetic.
 - No if/else branching beyond the per-step `| if … running` condition.
-- No `goto`/labels.
+- No `goto`/jumps. (`label` exists, but it *writes text on the key* - it is not a jump target.)
 
 If a user needs one of these, tell them plainly and offer the closest real thing (e.g. "the Focus plugin's timer can run this macro when it hits zero" for scheduling; hold-for-a-second-macro for a two-in-one key).
 
