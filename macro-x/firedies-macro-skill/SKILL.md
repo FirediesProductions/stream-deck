@@ -5,7 +5,7 @@ description: Write Macro Codes - the plain-text automation format for Macro X, t
 
 # Macro X - write a macro from a plain-English wish
 
-The **Macro X** plugin (Elgato Stream Deck, Windows) turns one key into a whole routine. Every macro is a **Macro Code**: a few lines of plain text. This skill turns a plain-English request into a valid Macro Code the user can paste straight into the plugin.
+The **Macro X** plugin (Elgato Stream Deck, Windows and Mac) turns one key into a whole routine. Every macro is a **Macro Code**: a few lines of plain text. This skill turns a plain-English request into a valid Macro Code the user can paste straight into the plugin.
 
 ## How to respond
 
@@ -15,6 +15,7 @@ The **Macro X** plugin (Elgato Stream Deck, Windows) turns one key into a whole 
 4. Give the key a short `name:` (it becomes the label on the key).
 5. In one line, tell them how to use it: **open the Macro key's settings in Stream Deck, click "Show code", paste, and Apply.**
 6. If a path/app/keybind is user-specific (an install path, a Discord mute shortcut), leave a clearly-marked placeholder and say what to swap.
+7. **Windows or Mac?** The same code runs on both, but paths, apps and a few keys differ. If they say Mac (or mention Finder, ⌘, Spotlight, an `.app`), write it the Mac way - see **On a Mac** in `references/macro-codes.md`. If it isn't clear and the code has a path or app in it, ask which one they're on.
 
 Keep it tight. One code block, one line of instruction, one line of "swap this if…". No lecture.
 
@@ -82,6 +83,20 @@ name: REC
 claude "Open Audacity, create a new project, and arm a mono track for recording" do
 ```
 > The `do` word lets Claude actually run it. Needs Claude Code installed (claude.com/code); it uses the login you're already signed into.
+
+**On a Mac - "Run my Apple Shortcut called Good Morning"**
+```
+name: MORNING
+open "shortcuts://run-shortcut?name=Good%20Morning"
+```
+> Use the shortcut's exact name, with every space written as `%20`.
+
+**On a Mac - "Snip part of the screen to the clipboard"**
+```
+name: SNIP
+hotkey control+cmd+shift+4
+```
+> On a Mac `cmd` is ⌘ and `control` is the real Control key. Plain `ctrl` also means ⌘, so Windows codes like `ctrl+c` just work.
 
 ## The one rule that matters
 

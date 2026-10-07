@@ -238,5 +238,50 @@ Do not invent these - they will not parse:
 
 If a user needs one of these, tell them plainly and offer the closest real thing (e.g. "the Focus plugin's timer can run this macro when it hits zero" for scheduling; hold-for-a-second-macro for a two-in-one key).
 
+## On a Mac
+
+Macro X runs the same Macro Codes on a Mac. Write them the same way, with these differences:
+
+**Keys.** `ctrl` means ⌘ Cmd on a Mac, so a Windows code like `hotkey ctrl+c` or `hotkey ctrl+s`
+works unchanged. `win` is ⌘ too. `cmd` / `command` also mean ⌘, `control` is the real Control
+key, and `alt` / `option` / `opt` are ⌥ Option. Raw SendKeys follows the same rule (`^c` = ⌘C).
+```
+hotkey ctrl+c                    # ⌘C - copy
+hotkey cmd+space                 # Spotlight
+hotkey control+cmd+shift+4       # snip a region to the clipboard
+hotkey control+cmd+q             # lock the Mac
+hotkey cmd+option+esc            # Force Quit
+```
+There is no `pause`, `numlock`, `scrolllock` or `stopmedia` key on a Mac - a step that sends
+one fails with that reason. `printscreen` becomes ⌘⇧3 (a screenshot to a file). The other
+media keys (`playpause`, `nexttrack`, `volumeup`, `mute` …) work.
+
+**run.** Mac paths, quoted: `run "/Applications/OBS.app"`. It starts an `.app`, a shell script
+(`.sh`, `.command`, `.zsh`), a Python script (`.py`, needs Python 3), an AppleScript
+(`.applescript`, `.scpt`) or any executable file. Windows types (`.exe .bat .ps1 .ahk .lnk
+.vbs`) are refused with a clear message. On an `.app`, `hidden` opens it in the background.
+
+**open.** A path, a folder, a URL, or an app link:
+```
+open "/Users/me/Documents"
+open "https://calendar.google.com"
+open "shortcuts://run-shortcut?name=Good%20Morning"   # run an Apple Shortcut
+```
+**Apple Shortcuts:** use the `shortcuts://` link above with the shortcut's exact name, every
+space written as `%20`. The Shortcuts app runs it, so shortcuts that control other apps work too.
+
+**window / wait.** `window focus "Safari"` matches a window title or the app's name.
+`wait process` takes the app's name as the Mac shows it (`wait process OBS 10000`, not `obs64`).
+
+**showdesktop** is the Mac's own Show Desktop: press it again and the windows come back.
+
+**sound.** A quoted path to a `.wav`, `.mp3`, `.aiff` or `.m4a`, e.g. `sound "/Users/me/ding.mp3"`.
+
+**claude.** Same step; `out notepad` opens the answer in TextEdit.
+
+**Permission (say this once when you write a Mac code that presses keys, types, or clicks).**
+The first time, macOS asks to allow **Stream Deck** under System Settings > Privacy & Security >
+Accessibility. Until it is allowed, those steps fail instead of pretending they worked.
+
 ## Using the code
 Open the Macro X key's settings in Stream Deck, click **Show code**, paste, and **Apply**. The blocks editor and the code stay in sync, so the pasted code becomes editable blocks immediately.
