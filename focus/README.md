@@ -92,6 +92,12 @@ the block.
 **Gradient** (the bar travels between two colours as the phase drains) · **Solid** · **B & W** ·
 **Clean** (just the time, large).
 
+**Follow the shared color** and the phases take the colour every Firedies plugin on your deck
+shares - the album cover of whatever is playing, a picture of your own, a link, or two colours you
+pick. Focus takes the deep end, a short break the bright end and a long break a paler bright, so
+work and rest never look alike. The day arc under the clock and the clock's accent follow it too.
+**B & W** stays black and white.
+
 ## Sound
 
 Eight chimes are included plus two alarms, and any of them can be your own file instead, with its
@@ -123,8 +129,12 @@ long you have. When the meeting starts it goes to a live **NOW**.
 - **A secret iCal URL is a password.** Anyone holding it can read that calendar. It stays on your
   machine, and if you ever share a screenshot of the settings, blur it.
 - **Join only works if the invitation carries a link.** No link in the event, nothing to open.
-- **Windows only, for now.**
+- **On a Mac (macOS 13 or later)** everything above works the same. A timer can end in a chime, lock,
+  sleep, shut down, restart or a macro. Shut down and restart open macOS's own dialog, with its
+  countdown and a Cancel button, and the first one asks you to allow **Firedies Focus**. A macro that
+  presses keys, types or clicks, and the lock action, need Stream Deck allowed under System Settings >
+  Privacy & Security > Accessibility (without it, lock puts the screen to sleep instead).
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

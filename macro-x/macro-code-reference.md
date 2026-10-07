@@ -223,6 +223,59 @@ open "https://example.com" | if chrome running | retry 2
 #off hotkey ctrl+s        a step kept but disabled
 ```
 
+## On a Mac
+
+Macro X runs the same Macro Codes on a Mac (macOS 13 or later). Write them the same way, with
+these differences.
+
+**Keys.** `ctrl` means ⌘ Cmd on a Mac, so a code written on Windows (`hotkey ctrl+c`,
+`hotkey ctrl+s`) works unchanged. `win`, `cmd` and `command` are ⌘ too, `control` is the real
+Control key, and `alt`, `option` and `opt` are ⌥ Option. Raw SendKeys follows the same rule
+(`^c` is ⌘C).
+```
+hotkey ctrl+c                    # ⌘C - copy
+hotkey cmd+space                 # Spotlight
+hotkey control+cmd+shift+4       # snip a region to the clipboard
+hotkey control+cmd+q             # lock the Mac
+hotkey cmd+option+esc            # Force Quit
+```
+There is no `pause`, `numlock`, `scrolllock` or `stopmedia` key on a Mac; a step that sends
+one fails and says why. `printscreen` becomes ⌘⇧3 (a screenshot to a file). The other media
+keys (`playpause`, `nexttrack`, `volumeup`, `mute`...) work.
+
+**`run`** takes a Mac path in quotes:
+```
+run "/Applications/OBS.app"
+run "/Users/you/scripts/backup.sh"
+```
+It starts an `.app`, a shell script (`.sh`, `.command`, `.zsh`), a Python script (`.py`, needs
+Python 3), an AppleScript (`.applescript`, `.scpt`) or any executable file. Windows types
+(`.exe` `.bat` `.ps1` `.ahk` `.lnk` `.vbs`) are refused with a clear message. On an `.app`,
+`hidden` opens it in the background.
+
+**`open`** takes a path, a folder, a URL, or an app link:
+```
+open "/Users/you/Documents"
+open "https://calendar.google.com"
+open "shortcuts://run-shortcut?name=Good%20Morning"
+```
+The last one runs an **Apple Shortcut**: its exact name after `name=`, every space written as
+`%20`. The Shortcuts app runs it, so shortcuts that control other apps work too.
+
+**`window` and `wait`.** `window focus "Safari"` matches a window title or the app's name.
+`wait process` takes the app's name as the Mac shows it: `wait process OBS`, not `obs64`.
+
+**`showdesktop`** is the Mac's own Show Desktop. Press it again and the windows come back.
+
+**`sound`** plays a quoted `.wav`, `.mp3`, `.aiff` or `.m4a`, e.g. `sound "/Users/you/ding.mp3"`.
+
+**`claude`** works the same; `out notepad` opens the answer in TextEdit.
+
+**One-time permission.** Steps that press keys, type, click or control windows need macOS to
+allow **Stream Deck** under System Settings > Privacy & Security > Accessibility. macOS asks
+the first time. Until it is allowed, those steps fail with the red cross instead of pretending
+they worked.
+
 ## Sharing rules of thumb
 
 - **Name it** (`name: ...`) so the key labels itself when pasted.

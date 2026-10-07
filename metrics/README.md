@@ -62,6 +62,9 @@ yours to move. Left at their defaults, a Disk face set to Capacity uses a wider 
 - **One fixed color instead** - turn the load coloring off and the bar stays the color you chose.
 - **The glyph has its own color** - each meter arrives with its own accent (CPU amber, RAM blue,
   GPU violet, VRAM green, Disk yellow) and any of them can be changed.
+- **Follow the shared color** - calm and working take the color every Firedies plugin on your deck
+  shares: the album cover of whatever is playing, a picture of your own, a link, or two colors you
+  pick. Busy stays red whatever the shared color is, and the glyph follows it too.
 
 There's a **Reset colors to default** button, so nothing you try is a one-way door.
 
@@ -128,7 +131,13 @@ face is on screen, and the reader shuts down entirely when the last meter is rem
   lists - so the share can read high or low.
 - **Disk activity is how busy, not how fast.** A drive can be at 100% while moving very little, if
   what it's moving is scattered. That's the counter's meaning, and we don't dress it up as a speed.
-- **Windows only, for now.** Every one of these counters is a Windows interface.
+- **On a Mac (macOS 13 or later)** the same five meters read what macOS already reports, still with
+  no driver and no administrator prompt. CPU is the processors' own load, RAM is Activity Monitor's
+  *Memory Used* (cached files don't count as used), GPU is the graphics driver's own utilization
+  figure, and Disk is how busy every disk is, together. The VRAM meter is labeled **GPU MEM** there,
+  because on Apple silicon the graphics share one pool of memory with the processor. Choosing a single
+  drive is Windows only for now, and a hold opens Activity Monitor, Finder, System Settings or System
+  Information instead of their Windows twins.
 - **Nothing leaves your PC.** No account, no sign-up, no analytics, no network call of any kind.
 
 ## Troubleshooting
@@ -147,4 +156,4 @@ by policy. Removing every Metrics key and adding one back restarts it.
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

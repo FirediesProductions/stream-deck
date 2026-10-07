@@ -76,6 +76,11 @@ Both numbers are yours - a competitive shooter and a video call have very differ
 You can pick your own calm / working / busy colours, or turn the health colouring off and have one
 fixed colour instead.
 
+Or tick **"good" follows the shared color** and a healthy reading takes the colour every Firedies
+plugin on your deck shares: the album cover of whatever is playing, a picture of your own, a link,
+or two colours you pick. Amber and red never follow it - a slow or dropped connection always looks
+like one.
+
 ## The traffic meters
 
 Download and Upload show what is *actually moving* right now, not what your line could do in theory. They add up every network adapter, so with a VPN running you may see the same traffic counted twice.
@@ -115,7 +120,11 @@ On a dial, **turn** to cycle the four views and **press** to run. On a key, pres
 - **Server icons are fetched from the internet** the first time a server is seen - a brand mark
   from a public icon service, otherwise the site's own favicon. Bundled ones need no network at
   all. There's no analytics and no account - though the lookup does have to name the domain to the icon service it asks, so set your own icon on anything you'd rather keep here.
-- **Windows only, for now.**
+- **On a Mac (macOS 13 or later), latency is the TCP connection time.** Ping doesn't send an ICMP
+  echo there, so the reading runs a few milliseconds higher than a plain `ping` and follows the same
+  movement. The Speed Test's ping figure is Windows only for now. Download and Upload read the network
+  adapters' own counters, and **Detect my server** reads the connections your apps have open, with no
+  administrator prompt.
 
 ## If something looks wrong
 
@@ -128,4 +137,4 @@ On a dial, **turn** to cycle the four views and **press** to run. On a key, pres
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

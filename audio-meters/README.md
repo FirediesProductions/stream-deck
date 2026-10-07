@@ -166,7 +166,12 @@ air.
   will say so.
 - **Loudness is measured on what reaches the meter.** With the Windows slider compensated (the
   default) the reading is the app's own level; with it off, it is the level after the slider.
-- **Windows only, for now.** The loopback capture this reads is a Windows interface.
+- **On a Mac (macOS 13 or later)**, System, an output and a single app are heard through Core Audio
+  process taps, which need **macOS 14.2 or later**. On an earlier macOS an input still works, and the
+  other sources say what they need. The first time, macOS asks you to allow **Audio Meters** to record
+  audio. A Mac tap hears the sound **before** the volume slider, so the meters show the level apps
+  send, not your volume setting - turning the Mac down does not move them. The volume-slider
+  compensation switch is Windows only.
 
 ## Troubleshooting
 
@@ -186,4 +191,4 @@ and older gear sit at -20, modern loud masters read better at -14 or -12.
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

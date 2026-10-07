@@ -22,7 +22,7 @@ Built by [Firedies Productions](https://firedies.productions), Oxford.
 | **Now Playing** | Album art, track and artist, live progress. The accent is sampled from the cover. | $5.99 | [`now-playing/`](now-playing/) |
 | **Audio Meters** | Nine studio meters - level, VU, spectrum, spectrogram, waveform, scope, stereo, loudness, key - on keys and dials. | TBD | [`audio-meters/`](audio-meters/) |
 
-All plugins: Windows 10/11, Stream Deck 6.9+. Find them on the
+All plugins: Windows 10/11 and macOS 13 or later, Stream Deck 6.9+. Find them on the
 [Elgato Marketplace](https://marketplace.elgato.com) under **Firedies Productions**.
 
 > **The house rule: the face never lies.** A tick means it ran. A red cross tells you which

@@ -75,6 +75,10 @@ Prefer to drive it yourself? **Custom** takes one colour of your choosing and ru
 same ladder. And if you want the last word, every element - header, number, the live dot - can be
 set by hand, with a reset that puts it all back.
 
+**Shared** is the third choice under **Color from**: the plaque takes the colour every Firedies
+plugin on your deck shares - the album cover of whatever is playing, a picture of your own, a link,
+or two colours you pick. Badge stays the default, because a tier's colour is part of the rank.
+
 ## The face is yours
 
 - **What sits in the middle** - the badge, or the number. A rating of 2140 deserves the centre; a
@@ -108,8 +112,10 @@ cannot, so it carries a different one.
   with the name you typed. No account, no analytics, no telemetry.
 - **An uploaded badge is used as given.** We read its colour and build the plaque around it - we
   don't recolour, crop or redraw your image.
-- **Windows only, for now.**
+- **Windows and Mac.** On a Mac (macOS 13 or later) it works the same, with no permission to grant.
+  Uploaded badges are kept in `~/Library/Application Support/Firedies`, outside the plugin, so an
+  update never removes them.
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)

@@ -11,7 +11,7 @@ Macro X code box and it becomes your key.
 ---
 
 ```
-You write Firedies Macro Codes for the Macro X plugin (Elgato Stream Deck, Windows).
+You write Firedies Macro Codes for the Macro X plugin (Elgato Stream Deck, Windows or Mac).
 A Macro Code is a macro as plain text: ONE step per line, run top to bottom.
 Reply with ONLY the code, inside a code block. No explanation unless I ask.
 
@@ -62,6 +62,22 @@ PER-STEP EXTRAS (append after a | at the end of a line)
   | retry N                a failing step gets N more tries
   e.g. run "C:\obs\obs64.exe" | if obs64 not running | retry 2
 
+ON A MAC (only when I say I'm on a Mac; otherwise assume Windows)
+  Same steps, same format. The differences:
+  ctrl = Cmd, so ctrl+c / ctrl+s work as written. win, cmd, command = Cmd too.
+  control = the real Control key. alt, option, opt = Option.
+    e.g. hotkey cmd+space (Spotlight), hotkey control+cmd+q (lock the Mac)
+  No pause, numlock, scrolllock or stopmedia key on a Mac. printscreen = Cmd+Shift+3.
+  run "/Applications/OBS.app"   starts an .app, .sh/.command/.zsh, .py (Python 3),
+        .applescript/.scpt or any executable. .exe/.bat/.ps1/.ahk/.lnk/.vbs are refused.
+  open "shortcuts://run-shortcut?name=Good%20Morning"   runs an Apple Shortcut
+        (its exact name, every space written as %20).
+  window and wait process use the app's name as the Mac shows it (wait process OBS).
+  sound "/Users/you/ding.mp3" plays .wav .mp3 .aiff .m4a. claude ... out notepad = TextEdit.
+  Use Mac paths, with a placeholder like "/Users/you/path/to/file" when you don't know one.
+  Keys, typing, clicks and windows need Stream Deck allowed once in System Settings >
+  Privacy & Security > Accessibility. Say so in a # comment when a Mac code uses them.
+
 RULES
   - One step per line. Keep it to the steps above; do not invent verbs.
   - A step that fails stops the macro and the key shows a red cross with the step number.
@@ -79,6 +95,23 @@ EXAMPLE
   type "gl hf"
   hotkey enter
 ```
+
+---
+
+**On a Mac?** Say so in your request (*"I'm on a Mac: open OBS, wait for it, start recording"*).
+The prompt above already knows the Mac differences, so a Mac reply looks like this:
+
+```
+name: REC
+# needs Stream Deck allowed in Privacy & Security > Accessibility (for the hotkey)
+run "/Applications/OBS.app" | if OBS not running
+wait process OBS 20000
+wait 1500
+# set this to your own OBS "Start Recording" hotkey
+hotkey cmd+shift+r
+```
+
+The full list of Mac differences is in the [reference](macro-code-reference.md#on-a-mac).
 
 ---
 

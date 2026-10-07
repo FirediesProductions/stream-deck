@@ -39,6 +39,9 @@ Nothing is faked.
   it's on (2/4).
 - **Green tick** - every step ran. **Red cross + STEP 3** - it stopped at step 3, and that's
   the honest truth, not a guess.
+- **Shared color** - tick it and the key's accent follows the color every Firedies plugin on your
+  deck shares: the album cover of whatever is playing, a picture of your own, a link, or two colors
+  you pick. Animated faces take the new color once it has settled.
 
 ## Steps
 
@@ -120,6 +123,11 @@ We'd rather tell you now than have you find out later:
   `win+alt+r` (Game Bar record), `win` alone opens Start. There's a premade picker in
   the settings panel. (Show desktop stays its own step because it uses Windows' own
   toggle - press again and everything comes back.)
+- **On a Mac (macOS 13 or later)** the same Macro Codes run: `ctrl` means Cmd, so Windows macros
+  carry over, and Run takes `.app`, shell, Python and AppleScript files. Keys, typing, clicks and
+  window control need Stream Deck allowed once under System Settings > Privacy & Security >
+  Accessibility; until then those steps stop with the red cross. Every difference is in
+  [the reference](macro-code-reference.md#on-a-mac).
 - **Toggles show believed state** for apps that can't be queried. Press the key, not the
   app, and the faces stay in sync.
 - **Everything else runs on your machine.** No account to make, no sign-up, no analytics. The
@@ -130,4 +138,4 @@ We'd rather tell you now than have you find out later:
 
 ---
 
-*Firedies Productions · Windows 10/11 · Stream Deck 6.9+*
+*Firedies Productions · Windows 10/11 · macOS 13+ · Stream Deck 6.9+*

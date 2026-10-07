@@ -15,6 +15,9 @@ the album cover itself, so the key takes on the record's own palette.
 Now Playing reads Windows' own media system (System Media Transport Controls), the same one that
 powers the volume overlay. No login, no account, no per-app setup.
 
+On a Mac (macOS 13 or later) it reads **Apple Music and Spotify** directly, through their own
+scripting, because macOS has no shared media session a plugin can read.
+
 ## Quick start
 
 1. Drag **Now Playing** (under **Now Playing**) onto any key or dial.
@@ -29,6 +32,11 @@ black one.
 
 If you'd rather it held still: **Always blue** keeps the Firedies accent whatever is playing, and
 **Custom** lets you set your own gradient and keep it.
+
+That colour is also the family's **shared color**, which any other Firedies plugin on your deck can
+follow. Point it at a picture of your own, a link, or two colours you pick instead, and **Album
+cover** here follows that along with everything else. A new cover's colours roll in over a second
+rather than snapping.
 
 ## When nothing is playing
 
@@ -117,9 +125,12 @@ listening to.
   those come from the player, and the key shows what it was given rather than inventing the rest.
 - **Some players never register at all.** If an app doesn't publish a media session, nothing on
   Windows can see it, including the volume overlay.
-- **Nothing leaves your PC.** No account, no sign-up, no analytics, and not a single network call -
-  the artwork comes from the player, not from the internet.
-- **Windows only, for now.** The media session this reads is a Windows interface.
+- **Nothing leaves your computer.** No account, no sign-up, no analytics. On Windows there is not a
+  single network call - the artwork comes from the player. On a Mac, Spotify hands over a link to its
+  cover rather than the picture, so that one image is fetched from Spotify's own image server.
+- **On a Mac, it's Apple Music and Spotify.** Other players and browser tabs don't appear. It only
+  talks to a player that is already open, so it never launches one. The first time, macOS asks you to
+  allow **Firedies Now Playing** to control each player - once for Apple Music, once for Spotify.
 
 ## Troubleshooting
 
@@ -134,4 +145,4 @@ players do this on certain sites.
 
 ---
 
-Windows 10/11 · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
+Windows 10/11 · macOS 13+ · Stream Deck 6.9+ · [Elgato Marketplace](https://marketplace.elgato.com)
